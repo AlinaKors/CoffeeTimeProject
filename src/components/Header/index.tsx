@@ -16,7 +16,7 @@ export const Header = memo(() => {
     <HeaderWrapper>
       <Link to="/">
         <CompanyContainer title="Main">
-          <LogoImg src={Logo} alt="CoffeeTime" />
+          <LogoImg src={Logo} alt="CoffeeTime Logo" />
           <CompanyInfo>
             <CompanyName>CoffeeTime</CompanyName>
             <CompanySlogan>Best coffee of your life</CompanySlogan>

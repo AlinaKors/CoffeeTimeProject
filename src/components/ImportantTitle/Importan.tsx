@@ -20,7 +20,11 @@ export const Important = memo(() => {
           Rick Astley approves. c:
         </ImportantDescription>
       </ImportantInfo>
-      <PlayerWrapper>
+      <PlayerWrapper
+        data-type="video"
+        role="application"
+        aria-label="Rick Astley - Never Gonna Give You Up (Official Music Video)"
+      >
         <ReactPlayer
           className="react-player"
           light
@@ -31,7 +35,7 @@ export const Important = memo(() => {
           config={{
             playerVars: { showinfo: 1 },
           }}
-          playIcon={<img src={PlayIcon} />}
+          playIcon={<img src={PlayIcon} alt="Button play video" />}
         />
       </PlayerWrapper>
     </ImportantContainer>

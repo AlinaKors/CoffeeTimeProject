@@ -1,54 +1,72 @@
-# React + TypeScript + Vite
+# Coffee Time — Stylish Café Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, elegant landing page for a coffee shop or café. Built with Next.js, Tailwind CSS, and sprinkled with modern CSS features for extra flavor. Fully responsive, SEO-optimized, and performance-first.
 
-Currently, two official plugins are available:
+Live demo 👉 coffee-time-project.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
 
-## Expanding the ESLint configuration
+- React (Hooks), React-router
+- TypeScript
+- Vercel
+- Styled
+- Vite
+- Ant Design
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Setup
 
 ```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+git clone https://github.com/AlinaKors/CoffeeTimeProject.git
+cd coffee-time-project
+npm install
+npm run dev
 ```
+
+To build for production:
+
+```js
+npm run build
+npm run preview
+```
+
+## Hosting
+
+Hosted on Vercel. Supports static export if needed using next export.
+You can deploy by:
+
+1. Forking the repo
+2. Connecting it to Vercel
+3. Deploying with default settings
+
+## Styling Notes
+
+The design is minimalistic, but fully complies with the template provided in the terms of reference.
+It is also adapted for mobile devices and is responsive. Executed in warm colors, which will be pleasing to the eye both in the daytime and at night.
+All colors are taken, close to the shade of coffee, which corresponds to the theme of the site itself.
+
+Also made button animations without using JS, for more optimization. (Button animations are made in different variations to demonstrate the work with CSS).
+
+Ant Design was used for the form and custom input customization using CSS.
+
+## SEO & Accessibility
+
+- Meta tags and dynamic <Head> configuration for title, description, OG, TwitterCard, Schema metadata.
+- Semantic HTML: Sections, article, landmarks (<main>, <header>, <footer>) for screen readers.
+- ALT text for all images.
+- use ARIA-attr for custom video player
+
+## Performance
+
+The project is optimized for fast loading, responsiveness and efficient rendering. The following decisions have been made to improve performance:
+
+- By utilizing Vite, development happens with minimal latency.
+- This project uses React Player to embed and play video and audio from various sources.
+  -- Use light: Allows you to display a preview image instead of a video before playback starts, reducing page load time.
+  -- Using the playing attribute: Video or audio does not start playing until the user initiates an action, saving resources.
+- The project uses React.memo to improve performance and prevent unnecessary rendering of components.
+
+## Core Web Vitals
+
+- LCP: ~0.92s
+- CLS: ~0.02
+- LCP: ~40ms

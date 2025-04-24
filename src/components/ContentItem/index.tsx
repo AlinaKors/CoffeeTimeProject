@@ -9,10 +9,10 @@ type ContentItemProps = {
 export const ContentItem: React.FC<ContentItemProps> = memo(({ title, description }) => {
   return (
     <ContentItemContainer>
-      <article>
+      <section>
         <ContentItemTitle>{title}</ContentItemTitle>
         <ContentItemDesc>{description}</ContentItemDesc>
-      </article>
+      </section>
     </ContentItemContainer>
   );
 });
