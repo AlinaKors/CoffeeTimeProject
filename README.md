@@ -69,4 +69,4 @@ The project is optimized for fast loading, responsiveness and efficient renderin
 
 - LCP: ~0.92s
 - CLS: ~0.02
-- LCP: ~40ms
+- INP: ~40ms
